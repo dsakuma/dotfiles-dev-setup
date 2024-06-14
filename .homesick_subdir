@@ -1,0 +1,7 @@
+Library/Application Support/Code/User
+.config/nvim
+.ssh
+.npmrcs
+.homesick/repos/dotfiles
+.config/alacritty
+.config/gcloud/configurations
