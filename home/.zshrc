@@ -34,13 +34,14 @@ export TERM=xterm-256color # Fix color in lightline.vim
 
 # Aliases
 alias dcup="docker-compose up"
-# alias ls='ls --color=auto'
-# alias l='ls -lFh'
+alias ls='ls --color=auto'
+alias l='ls -lFh'
+alias ll='ls -lFha'
 alias cd='z'
-alias ls='eza'
-alias l='exa -l'
-alias ll='eza -al'
-alias tree='eza --tree'
+# alias ls='eza'
+# alias l='exa -l'
+# alias ll='eza -al'
+# alias tree='eza --tree'
 source_if_exists "$HOME/.git.zsh"
 
 # oh-my-zsh
