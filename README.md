@@ -4,14 +4,14 @@ My dotfiles
 
 ## Prerequisites
 
-* [Homeshick](https://github.com/andsens/homeshick)
+* [Homesick](https://github.com/technicalpickles/homesick)
 
 ## Usage
 
 Clone and link this castle
 
 ```bash
-homeshick clone git@github.com:dsakuma/dotfiles.git
-homeshick link dotfiles
+homesick clone git@github.com:dsakuma/dotfiles.git
+homesick link dotfiles
 exec zsh -l
 ```
