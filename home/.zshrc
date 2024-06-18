@@ -46,7 +46,6 @@ source_if_exists "$HOME/.git.zsh"
 # zsh plugins
 source_if_exists $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # brew arm64
 source_if_exists "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # brew intel
-# source_if_exists "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # aur
 source_if_exists "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # apt
 
 # Android Studio
@@ -58,9 +57,6 @@ fi
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
-
-# Conda
-# source_if_exists "/opt/miniconda3/etc/profile.d/conda.sh" # pamac
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
