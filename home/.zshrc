@@ -49,14 +49,6 @@ source_if_exists "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighti
 # source_if_exists "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # aur
 source_if_exists "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # apt
 
-# Start ssh-agent on Linux
-# if ! pgrep ssh-agent > /dev/null; then # wsl
-#   rm -f /tmp/ssh-auth-sock
-#   eval "$(ssh-agent -s -a /tmp/ssh-auth-sock)"
-# elif [ -z $SSH_AUTH_SOCK ]; then # wsl
-#   export SSH_AUTH_SOCK=/tmp/ssh-auth-sock
-# fi
-
 # Android Studio
 if is_macos; then
   export ANDROID_HOME=$HOME/Library/Android/sdk
