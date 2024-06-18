@@ -37,9 +37,10 @@ alias tree='eza --tree'
 source_if_exists "$HOME/.git.zsh"
 
 # zsh plugins
-source_if_exists $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # brew arm64
-source_if_exists "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # brew intel
-source_if_exists "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # apt
+source_if_exists $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # mac arm64 brew
+source_if_exists "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # mac intel brew
+source_if_exists "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # ubuntu apt
+source_if_exists "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" # ubuntu apt
 
 # Android Studio
 if is_macos; then
