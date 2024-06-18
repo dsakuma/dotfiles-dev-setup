@@ -29,9 +29,6 @@ export SAVEHIST=10000
 
 # Aliases
 alias dcup="docker-compose up"
-# alias ls='ls --color=auto'
-# alias l='ls -lFh'
-# alias ll='ls -lFha'
 alias cd='z'
 alias ls='eza'
 alias l='exa -l --icons --git'
