@@ -7,10 +7,6 @@ source_if_exists() {
   if [[ -f "$1" ]]; then source "$1" || :; fi
 }
 
-is_ssh() {
-  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then true; else false; fi
-}
-
 is_macos() {
   if [[ $OSTYPE =~ "darwin" ]]; then true; else false; fi
 }
