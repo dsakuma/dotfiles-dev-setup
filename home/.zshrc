@@ -25,43 +25,37 @@ is_macos_intel() {
 
 # Environment variables
 export EDITOR=vim
+export FZF_DEFAULT_COMMAND='fd'
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=10000
-export FZF_DEFAULT_COMMAND='fd'
 export PIPENV_VENV_IN_PROJECT=1
 export SAVEHIST=10000
-export TERM=xterm-256color # Fix color in lightline.vim
 
 # Aliases
 alias dcup="docker-compose up"
-alias ls='ls --color=auto'
-alias l='ls -lFh'
-alias ll='ls -lFha'
+# alias ls='ls --color=auto'
+# alias l='ls -lFh'
+# alias ll='ls -lFha'
 alias cd='z'
-# alias ls='eza'
-# alias l='exa -l'
-# alias ll='eza -al'
-# alias tree='eza --tree'
+alias ls='eza'
+alias l='exa -l --icons --git'
+alias ll='eza -la --icons --git'
+alias tree='eza --tree'
 source_if_exists "$HOME/.git.zsh"
-
-# oh-my-zsh
-# export ZSH=$HOME/.oh-my-zsh
-# ZSH_THEME="robbyrussell"
-# source_if_exists $ZSH/oh-my-zsh.sh
 
 # zsh plugins
 source_if_exists $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # brew arm64
 source_if_exists "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # brew intel
-source_if_exists "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # aur
+# source_if_exists "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # aur
 source_if_exists "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # apt
 
 # Start ssh-agent on Linux
-if ! pgrep ssh-agent > /dev/null; then # wsl
-  rm -f /tmp/ssh-auth-sock
-  eval "$(ssh-agent -s -a /tmp/ssh-auth-sock)"
-elif [ -z $SSH_AUTH_SOCK ]; then # wsl
-  export SSH_AUTH_SOCK=/tmp/ssh-auth-sock
-fi
+# if ! pgrep ssh-agent > /dev/null; then # wsl
+#   rm -f /tmp/ssh-auth-sock
+#   eval "$(ssh-agent -s -a /tmp/ssh-auth-sock)"
+# elif [ -z $SSH_AUTH_SOCK ]; then # wsl
+#   export SSH_AUTH_SOCK=/tmp/ssh-auth-sock
+# fi
 
 # Android Studio
 if is_macos; then
@@ -74,7 +68,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 
 # Conda
-source_if_exists "/opt/miniconda3/etc/profile.d/conda.sh" # pamac
+# source_if_exists "/opt/miniconda3/etc/profile.d/conda.sh" # pamac
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -103,3 +97,5 @@ eval "$(starship init zsh)"
 # Zoxide
 eval "$(zoxide init zsh)"
 
+# Mise
+eval "$(~/.local/bin/mise activate zsh)"
