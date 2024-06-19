@@ -31,8 +31,8 @@ export SAVEHIST=10000
 alias dcup="docker-compose up"
 alias cd='z'
 alias ls='eza'
-alias l='exa -l --icons --git'
-alias ll='eza -la --icons --git'
+alias l='exa -l --icons'
+alias ll='eza -la --icons'
 alias tree='eza --tree'
 source_if_exists "$HOME/.git.zsh"
 
