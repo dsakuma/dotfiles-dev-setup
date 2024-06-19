@@ -19,7 +19,7 @@ is_macos_arm() {
   if [[ is_macos && $(uname -p) == 'arm64' ]]; then true; else false; fi
 }
 
-current_os () {
+current_os() {
   if is_macos_intel; then
     "macos_intel"
   elif is_macos_arm; then
