@@ -15,6 +15,21 @@ is_macos_intel() {
   if [[ is_macos && $(uname -p) == 'i386' ]]; then true; else false; fi
 }
 
+is_macos_arm() {
+  if [[ is_macos && $(uname -p) == 'arm64' ]]; then true; else false; fi
+}
+
+current_os () {
+  if is_macos_intel; then
+    "macos_intel"
+  elif is_macos_arm; then
+    "macos_arm"
+  else
+    "linux"
+  fi
+}
+
+
 #################
 # User settings #
 #################
@@ -36,10 +51,12 @@ alias ll='eza -la --icons'
 alias tree='eza --tree'
 source_if_exists "$HOME/.git.zsh"
 
-# zsh plugins
+# zsh-syntax-highlighting
 source_if_exists $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # mac arm64 brew
 source_if_exists "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # mac intel brew
 source_if_exists "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # ubuntu apt
+
+# zsh-autosuggestions
 source_if_exists "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" # ubuntu apt
 
 # Android Studio
