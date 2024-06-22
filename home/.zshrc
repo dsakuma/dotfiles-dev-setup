@@ -49,6 +49,7 @@ alias ls='eza'
 alias l='exa -l --icons'
 alias ll='eza -la --icons'
 alias tree='eza --tree'
+alias lg='lazygit'
 source_if_exists "$HOME/.git.zsh"
 
 # zsh-syntax-highlighting
@@ -97,4 +98,9 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 # Mise
-eval "$(~/.local/bin/mise activate zsh)"
+# eval "$(mise activate zsh --shims)" # should be first
+# eval "$(mise activate zsh)"
+
+# Asdf
+# . "$HOME/.asdf/asdf.sh"
+#
