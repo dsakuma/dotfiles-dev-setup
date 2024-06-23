@@ -98,9 +98,5 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 # Mise
-# eval "$(mise activate zsh --shims)" # should be first
-# eval "$(mise activate zsh)"
-
-# Asdf
-# . "$HOME/.asdf/asdf.sh"
+eval "$(mise activate zsh)"
 #
