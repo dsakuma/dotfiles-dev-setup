@@ -46,7 +46,7 @@ export SAVEHIST=10000
 alias dcup="docker-compose up"
 alias cd='z'
 alias ls='eza'
-alias l='exa -l --icons'
+alias l='eza -l --icons'
 alias ll='eza -la --icons'
 alias tree='eza --tree'
 alias lg='lazygit'
@@ -99,4 +99,4 @@ eval "$(zoxide init zsh)"
 
 # Mise
 eval "$(mise activate zsh)"
-#
+
