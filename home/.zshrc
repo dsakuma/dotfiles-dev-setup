@@ -103,3 +103,6 @@ eval "$(starship init zsh)"
 # Mise
 eval "$(mise activate zsh)"
 
+# ssh-agent
+eval "$(ssh-agent -s)"
+
