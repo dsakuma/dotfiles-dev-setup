@@ -44,14 +44,9 @@ export SAVEHIST=10000
 
 # Aliases
 alias dcup="docker-compose up"
-# alias cd='z'
 alias ls='ls --color'
 alias l='ls'
 alias ll='ls -l'
-# alias ls='e-za'
-# alias l='eza -l --icons'
-# alias ll='eza -la --icons'
-# alias tree='eza --tree'
 alias lg='lazygit'
 source_if_exists "$HOME/.git.zsh"
 

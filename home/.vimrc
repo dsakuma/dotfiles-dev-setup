@@ -1,6 +1,6 @@
 " Enable plugins
 call plug#begin()
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim', { 'as': 'onedark' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -9,7 +9,7 @@ call plug#end()
 
 " Set color theme
 set termguicolors
-silent! colorscheme dracula
+silent! colorscheme onedark
 
 " Highlight syntax
 syntax on
