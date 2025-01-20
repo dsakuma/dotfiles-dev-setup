@@ -101,3 +101,5 @@ eval "$(mise activate zsh)"
 # ssh-agent
 eval "$(ssh-agent -s)"
 
+# brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

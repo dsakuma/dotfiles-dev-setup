@@ -1,1 +1,5 @@
 [tools]
+
+trusted_config_paths = [
+    '~/.mise.local.toml',
+]
