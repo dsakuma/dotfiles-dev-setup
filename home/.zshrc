@@ -99,7 +99,7 @@ eval "$(starship init zsh)"
 eval "$(mise activate zsh)"
 
 # ssh-agent
-eval "$(ssh-agent -s)"
+# eval "$(ssh-agent -s)" # not needed when gnome keyring is present
 
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
