@@ -92,9 +92,6 @@ export PATH=$PATH:~/.local/bin
 # Starship
 eval "$(starship init zsh)"
 
-# Zoxide
-#eval "$(zoxide init zsh)"
-
 # Mise
 eval "$(mise activate zsh)"
 
