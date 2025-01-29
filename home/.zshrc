@@ -89,14 +89,12 @@ export PATH=$PATH:~/.local/bin
 # fzf shell integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # Starship
 eval "$(starship init zsh)"
 
 # Mise
 eval "$(mise activate zsh)"
 
-# ssh-agent
-# eval "$(ssh-agent -s)" # not needed when gnome keyring is present
-
-# brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
