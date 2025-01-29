@@ -42,6 +42,12 @@ export HISTSIZE=10000
 export PIPENV_VENV_IN_PROJECT=1
 export SAVEHIST=10000
 
+# Add to PATH
+export PATH=$PATH:~/.local/bin # fdfind as fd in ubuntu
+
+# brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # Aliases
 alias dcup="docker-compose up"
 alias ls='ls --color'
@@ -57,6 +63,15 @@ source_if_exists "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zsh-autosuggestions
 source_if_exists "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" # ubuntu apt
+
+# fzf shell integration
+source_if_exists "~/.fzf.zsh"
+
+# Starship
+eval "$(starship init zsh)"
+
+# Mise
+eval "$(mise activate zsh)"
 
 # Android Studio
 if is_macos; then
@@ -82,19 +97,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# fdfind as fd in ubuntu
-export PATH=$PATH:~/.local/bin
-
-# fzf shell integration
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# Starship
-eval "$(starship init zsh)"
-
-# Mise
-eval "$(mise activate zsh)"
-
