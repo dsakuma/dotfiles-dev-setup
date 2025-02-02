@@ -57,3 +57,6 @@ eval "$(starship init zsh)"
 
 # Mise
 eval "$(mise activate zsh)"
+
+# Cargo
+source /home/dsakuma/.cargo/env
