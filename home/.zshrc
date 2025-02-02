@@ -2,7 +2,8 @@
 # Functions #
 #############
 
-source_if_exists() { if [[ -f "$1" ]]; then source "$1" || :; fi }
+source_if_exists() { if [[ -f "$1" ]]; then source "$1"; fi }
+eval_if_exists()   { if command -v "$1" &> /dev/null; then eval "$("$1" "${@:2}")"; fi }
 
 # OS checks
 is_macos()         { [[ $OSTYPE =~ "darwin" ]]; }
@@ -24,7 +25,7 @@ export SAVEHIST=10000
 export PATH=$PATH:~/.local/bin # fdfind as fd in ubuntu
 
 # brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # eval_if_exists
+eval_if_exists "/home/linuxbrew/.linuxbrew/bin/brew" "shellenv"
 
 # Aliases
 alias dcup="docker-compose up"
