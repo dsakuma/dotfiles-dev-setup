@@ -40,13 +40,13 @@ done
 # zsh-syntax-highlighting
 for zsh_syntax_highlight_path in "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" \
                    "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"; do
-  source_if_exists "$zsh_syntax_highlight"
+  source_if_exists "$zsh_syntax_highlight_path"
 done
 
 # zsh-autosuggestions
-for zsh_syntax_highlight_path in "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" \
+for zsh_autosuggestions_path in "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" \
                    "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"; do
-  source_if_exists "$zsh_syntax_highlight"
+  source_if_exists "$zsh_autosuggestions_path"
 done
 
 # fzf shell integration
