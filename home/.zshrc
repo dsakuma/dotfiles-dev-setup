@@ -59,4 +59,4 @@ eval "$(starship init zsh)"
 eval "$(mise activate zsh)"
 
 # Cargo
-source /home/dsakuma/.cargo/env
+source_if_exists "/home/dsakuma/.cargo/env"
