@@ -25,8 +25,8 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_
 # Aliases
 # -------
 alias dcup="docker-compose up"
-alias ls='ls --color'
-alias lg='lazygit'
+alias ls="ls --color"
+alias lg="lazygit"
 source_if_exists "$HOME/.git.zsh"
 
 # Plugins and frameworks
