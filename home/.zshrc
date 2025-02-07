@@ -27,6 +27,9 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_
 alias dcup="docker-compose up"
 alias ls="ls --color"
 alias lg="lazygit"
+alias update="$(if is_macos; \
+  then echo 'brew update && brew upgrade'; \
+  else echo 'sudo snap refresh && sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && flatpak update'; fi)"
 source_if_exists "$HOME/.git.zsh"
 
 # Plugins and frameworks
