@@ -29,7 +29,7 @@ alias ls="ls --color"
 alias lg="lazygit"
 alias update="$(if is_macos; \
   then echo 'brew update && brew upgrade'; \
-  else echo 'sudo snap refresh && sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && flatpak update'; fi)"
+  else echo 'sudo snap refresh && sudo apt update && sudo apt upgrade -y && brew update && brew upgrade && flatpak update && sudo apt autoremove -y'; fi)"
 source_if_exists "$HOME/.git.zsh"
 
 # Plugins and frameworks
